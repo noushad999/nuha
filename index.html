@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Nuha - The Smile Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 flex flex-col justify-center items-center h-screen bg-gradient-to-r from-pink-300 via-lime-200 to-indigo-400">
+
+    <!-- Main Game Area -->
+    <div class="text-center p-8 rounded-lg bg-white shadow-xl w-80 md:w-96">
+        <!-- Game Smile -->
+        <div class="text-6xl mb-6">
+            <span>😊</span>
+        </div>
+
+        <h1 class="text-2xl font-bold text-gray-800 mb-4">Would you smile for me?</h1>
+
+        <!-- Yes / No Buttons -->
+        <div class="flex justify-around">
+            <button id="yesBtn" class="px-6 py-3 bg-green-500 text-white rounded-lg transform transition duration-300 hover:bg-green-600">Yes</button>
+            <button id="noBtn" class="px-6 py-3 bg-red-500 text-white rounded-lg transform transition duration-300 hover:bg-red-600">No</button>
+        </div>
+
+        <!-- Result Message -->
+        <div id="resultMessage" class="mt-6 text-xl text-gray-700 hidden">
+            <p id="message"></p>
+        </div>
+    </div>
+
+    <script>
+        // Event listener for the "Yes" button
+        document.getElementById('yesBtn').addEventListener('click', function() {
+            document.getElementById('message').textContent = "You are looking gorgeous, Nuha!";
+            document.getElementById('resultMessage').classList.remove('hidden');
+        });
+
+        // Event listener for the "No" button
+        document.getElementById('noBtn').addEventListener('click', function() {
+            // Open a funny YouTube meme
+            window.open("https://youtu.be/KUW_3t4SmL0?si=oUyKkSr4-9ezv22J", "_blank");
+        });
+    </script>
+</body>
+</html>
